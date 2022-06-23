@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import { Container } from "react-bootstrap";
 
 function HomePage() {
+  useEffect(() => {
+    if (window && window.location.hash.includes("_token=")) {
+      window.location.replace("/admin/" + window.location.hash);
+    }
+  }, []);
+
   return (
     <Container>
       <h1>Welcome to Next.js!</h1>
