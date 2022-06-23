@@ -112,13 +112,12 @@ class MyDocument extends Document {
 `,
             }}
           />
-
-          {/* <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" /> */}
         </Head>
         <body>
           <Main />
           <NextScript />
           {/* <Script
+            strategy="beforeInteractive"
             id="netlify-identity"
             dangerouslySetInnerHTML={{
               __html: `
@@ -133,6 +132,10 @@ class MyDocument extends Document {
               }
           `,
             }}
+          />
+          <Script
+            src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+            strategy="beforeInteractive"
           /> */}
         </body>
       </Html>

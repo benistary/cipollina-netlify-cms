@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import Script from "next/script";
+import { useState } from "react";
 
 const CMS = dynamic(
   // @ts-ignore
@@ -11,10 +13,17 @@ const CMS = dynamic(
 );
 
 const Admin: React.FC = () => {
+  const [renderCms, setRenderCms] = useState(false);
+
   return (
     <>
-      <CMS />
-      {/* <Script
+      <Script
+        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        onLoad={() => {
+          setRenderCms(true);
+        }}
+      />
+      <Script
         id="netlify-identity"
         dangerouslySetInnerHTML={{
           __html: `
@@ -30,7 +39,8 @@ const Admin: React.FC = () => {
           `,
         }}
       />
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script> */}
+
+      {renderCms && <CMS />}
     </>
   );
 };
