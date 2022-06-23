@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 import { getCssText } from "../stitches.config";
 
 class MyDocument extends Document {
@@ -112,10 +113,28 @@ class MyDocument extends Document {
 `,
             }}
           />
+
+          <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <Script
+            id="netlify-identity"
+            dangerouslySetInnerHTML={{
+              __html: `
+               if (typeof window !== "undefined" && window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                  if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                      document.location.href = "/admin/";
+                    });
+                  }
+                });
+              }
+          `,
+            }}
+          />
         </body>
       </Html>
     );
