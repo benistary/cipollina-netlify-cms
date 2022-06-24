@@ -1,0 +1,19 @@
+category:
+  - label: Pizze klasické
+    description: (s paradajkovým základom)
+    products:
+      - label: MARINARA
+        weight: 400
+        price: 5.9
+        description: oregano, cesnak, olivový olej e.v.o
+      - label: MARGHERITA
+        weight: 450
+        price: 6.9
+        description: mozzarella, bazalka, olivový olej e.v.o
+  - label: Pizze Bianche/biele pizze
+    description: (bez paradajkového základu)
+    products:
+      - label: TARTUFO
+        weight: 490
+        price: 9.5
+        description: mozzarella, údený syr, tirolský speck, hľuzovkový olej
