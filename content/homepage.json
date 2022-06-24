@@ -1,0 +1,16 @@
+{
+  "category": [
+    {
+      "label": "dddd",
+      "description": "dddd",
+      "products": [
+        {
+          "label": "ddd",
+          "description": "ddd",
+          "weight": 10,
+          "price": 10
+        }
+      ]
+    }
+  ]
+}
