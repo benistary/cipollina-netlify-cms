@@ -34,7 +34,7 @@ const config = {
       success: "#8AC94A",
       warning: "#FFBC3D",
       grey: "#787878",
-      brightGrey: "#FBFBFB",
+      brightGrey: "#E3E3E3",
       lightGrey: "#C8C8C8",
       white: "#FFFFFF",
       black: "#2C2B2B",
@@ -62,7 +62,8 @@ const config = {
       bold: 700,
     },
     lineHeights: {
-      base: 1.8888888888888888,
+      // base: 1.8888888888888888,
+      base: 1.4,
     },
     space: {
       xxxsmall: "0.2777777777777778rem", // 5px

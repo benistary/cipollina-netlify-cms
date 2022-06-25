@@ -17,6 +17,24 @@
           "description": "mozzarella, bazalka, olivový olej e.v.o"
         }
       ]
+    },
+    {
+      "label": "Pizze Bianche / biele pizze",
+      "description": "(bez paradajkového základu)",
+      "products": [
+        {
+          "label": "TARTUFO",
+          "weight": 490,
+          "price": 9.5,
+          "description": "mozzarella, údený syr, tirolský speck, hľuzovkový olej"
+        },
+        {
+          "label": "PANCETTA",
+          "weight": 500,
+          "price": 8.9,
+          "description": "mozzarella, slanina, gorgonzola, cibuľa, kapary"
+        }
+      ]
     }
   ]
 }

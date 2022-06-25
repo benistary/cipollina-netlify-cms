@@ -183,16 +183,11 @@ const globalStyles = globalCss({
     marginBottom: "$contentSpacing",
   },
 
-  "html #homepage-layout": {
-    paddingTop: 0,
-  },
-
-  // "html #main-layout": {
-  //   paddingTop: `${HEADER_HEIGHT.desktop}px`,
-  // },
-
-  ".grecaptcha-badge": {
-    visibility: "hidden !important",
+  hr: {
+    border: 0,
+    borderTop: "0.5px solid $brightGrey",
+    marginTop: 0,
+    marginBottom: "$contentSpacing",
   },
 
   [`@media (max-width: ${breakpoints.m}px)`]: {
