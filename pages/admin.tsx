@@ -5,8 +5,7 @@ import { useState } from "react";
 const CMS = dynamic(
   // @ts-ignore
   () =>
-    import("netlify-cms-app").then((cms) => {
-      // @ts-ignore
+    import("netlify-cms-app").then((cms: any) => {
       cms.init();
     }),
   { ssr: false, loading: () => <p>Loading Admin...</p> },
