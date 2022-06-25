@@ -25,6 +25,7 @@ const config = {
     fonts: {
       montserrat: "Montserrat",
       merriweather: "Merriweather",
+      cormorantGaramond: "'Cormorant Garamond', serif",
     },
     colors: {
       primary: "#BE312B",

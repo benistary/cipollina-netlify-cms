@@ -83,7 +83,7 @@ const globalStyles = globalCss({
   },
 
   "html, body": {
-    fontFamily: "$montserrat",
+    fontFamily: "$cormorantGaramond",
     fontSize: "$base",
     lineHeight: "$base",
     color: "$black",
@@ -102,7 +102,7 @@ const globalStyles = globalCss({
   },
 
   input: {
-    fontFamily: "$montserrat",
+    fontFamily: "$cormorantGaramond",
     appearance: "none",
   },
 
@@ -113,7 +113,7 @@ const globalStyles = globalCss({
   },
 
   "h1, h2, h3, h4, h5, h6": {
-    fontFamily: "$merriweather",
+    fontFamily: "$cormorantGaramond",
   },
 
   h1: {

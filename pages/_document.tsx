@@ -7,7 +7,17 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="UTF-8" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap"
+            rel="stylesheet"
+          />
+          {/* <link
             rel="preload"
             href="/fonts/Merriweather-Bold.woff2"
             as="font"
@@ -48,12 +58,12 @@ class MyDocument extends Document {
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
-          />
+          /> */}
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
-          <style
+          {/* <style
             dangerouslySetInnerHTML={{
               __html: `
 @font-face {
@@ -111,7 +121,7 @@ class MyDocument extends Document {
 }
 `,
             }}
-          />
+          /> */}
         </Head>
         <body>
           <Main />
