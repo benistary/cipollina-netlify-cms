@@ -30,8 +30,14 @@ collections:
                 widget: list
                 fields:
                   - { label: Názov, name: label, widget: string }
+                  - { label: Číslo, name: number, widget: number }
                   - { label: Popis, name: description, widget: string }
-                  - { label: Gramáž, name: weight, widget: number }
+                  - {
+                      label: Gramáž,
+                      name: weight,
+                      widget: number,
+                      required: false,
+                    }
                   - {
                       label: Cena,
                       name: price,

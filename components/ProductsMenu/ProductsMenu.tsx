@@ -27,14 +27,14 @@ const Dd = styled("dd", {
   justifyContent: "end",
   fontSize: "$h4",
   fontWeight: "$bold",
-  color: "$primary",
-  marginInlineStart: "$xxxsmall",
+  color: "$black",
+  marginInlineStart: 0,
 });
 
 const ProductsMenu: React.FC<ProductsMenu> = ({ products }) => {
   return (
     <Dl>
-      {products.map(({ label, price, description, weight }, i) => (
+      {products.map(({ label, price, description, weight, number }, i) => (
         <>
           <Dt key={label}>
             <P
@@ -44,10 +44,11 @@ const ProductsMenu: React.FC<ProductsMenu> = ({ products }) => {
                 marginBottom: 0,
               }}
             >
-              {i}. {label}
+              {number}. {label}
             </P>
             <P css={{ marginBottom: "$xxsmall" }}>
-              <b>{weight}g</b> · {description}
+              {weight ? <b>{weight}g · </b> : ""}
+              {description}
             </P>
           </Dt>
           <Dd>{toPrice(price)}</Dd>

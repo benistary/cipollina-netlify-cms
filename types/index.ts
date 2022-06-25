@@ -8,7 +8,8 @@ export type Homepage = {
 
 export type Products = {
   label: string;
-  weight: number;
+  weight?: number;
   description: string;
   price: number;
+  number: number;
 }[];

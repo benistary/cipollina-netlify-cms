@@ -30,8 +30,14 @@ function HomePage() {
             >
               <Logo
                 css={{
+                  display: "flex",
                   marginLeft: "auto",
                   marginRight: "auto",
+                  width: "263px",
+
+                  "@sm": {
+                    width: "150px",
+                  },
                 }}
               />
 
@@ -39,24 +45,30 @@ function HomePage() {
             </Col>
           </Row>
 
-          {category.map(({ description, label, products }) => (
-            <Row key={label}>
-              <Col
-                sm={{
-                  span: 10,
-                  offset: 1,
-                }}
-                lg={{ span: 6, offset: 3 }}
-              >
+          {category.map(({ description, label, products }) => {
+            const products2 = products.splice(
+              products.length / 2,
+              products.length,
+            );
+
+            return (
+              <>
                 <H2 css={{ marginBottom: "$xxxsmall" }}>{label}</H2>
                 <p>{description}</p>
 
-                <ProductsMenu products={products} />
+                <Row key={label}>
+                  <Col md={6}>
+                    <ProductsMenu products={products} />
+                  </Col>
+                  <Col md={6}>
+                    <ProductsMenu products={products2} />
+                  </Col>
+                </Row>
 
                 <hr />
-              </Col>
-            </Row>
-          ))}
+              </>
+            );
+          })}
         </Container>
       </PageSection>
     </>
