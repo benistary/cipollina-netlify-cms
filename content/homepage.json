@@ -1,14 +1,20 @@
 {
   "category": [
     {
-      "label": "dddd",
-      "description": "dddd",
+      "label": "Pizze klasické",
+      "description": "(s paradajkovým základom)",
       "products": [
         {
-          "label": "ddd",
-          "description": "ddd",
-          "weight": 10,
-          "price": 10
+          "label": "MARINARA",
+          "weight": 400,
+          "description": "oregano, cesnak, olivový olej e.v.o",
+          "price": 5.9
+        },
+        {
+          "label": "MARGHERITA",
+          "weight": 450,
+          "price": 6.9,
+          "description": "mozzarella, bazalka, olivový olej e.v.o"
         }
       ]
     }
