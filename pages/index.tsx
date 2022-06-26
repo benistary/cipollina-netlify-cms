@@ -5,11 +5,13 @@ import Logo from "../components/Logo/Logo";
 import PageSection from "../components/PageSection/PageSection";
 import ProductsMenu from "../components/ProductsMenu/ProductsMenu";
 import { H2 } from "../components/Typography/Typography";
-import homepageData from "../content/homepage.json";
-import { Homepage } from "../types";
+import { Pizza, Posuchy } from "../types";
+import pizzaData from "../content/pizza.json";
+import otherData from "../content/other.json";
 
 function HomePage() {
-  const { category } = homepageData as Homepage;
+  const { pizza } = pizzaData as Pizza;
+  const posuchy = otherData as Posuchy;
 
   useEffect(() => {
     if (window && window.location.hash.includes("_token=")) {
@@ -41,38 +43,29 @@ function HomePage() {
                   },
                 }}
               />
-
               <hr />
             </Col>
           </Row>
 
-          {category.map(({ description, label, products }) => {
-            const products2 = products.splice(
-              products.length / 2 + 1,
-              products.length,
-            );
-
+          {pizza.map(({ description, label, products }) => {
             return (
-              <React.Fragment key={label}>
-                <PageSection
-                  spaceTop="none"
-                  spaceBottom="none"
-                  css={{ marginBottom: "$contentSpacing" }}
-                >
-                  <H2 css={{ marginBottom: "$xxxsmall" }}>{label}</H2>
-                  <p>{description}</p>
+              <PageSection
+                key={label}
+                spaceTop="none"
+                spaceBottom="none"
+                css={{ marginBottom: "$contentSpacing" }}
+              >
+                <Row key={label}>
+                  <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+                    <H2 css={{ marginBottom: "$xxxsmall" }}>{label}</H2>
+                    <p>{description}</p>
 
-                  <Row key={label}>
-                    <Col md={6}>
-                      <ProductsMenu products={products} />
-                    </Col>
-                    <Col md={6}>
-                      <ProductsMenu products={products2} />
-                    </Col>
-                  </Row>
-                </PageSection>
-                <hr />
-              </React.Fragment>
+                    <ProductsMenu products={products} />
+
+                    <hr />
+                  </Col>
+                </Row>
+              </PageSection>
             );
           })}
         </Container>

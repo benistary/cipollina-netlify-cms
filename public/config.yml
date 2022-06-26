@@ -1,13 +1,12 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
 local_backend: true
 
-# This line should *not* be indented
-media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "images/uploads"
 
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: "/images/uploads"
 
 locale: "sk"
 
@@ -15,32 +14,108 @@ collections:
   - label: "Stránky"
     name: "pages"
     files:
-      - label: "Hlavná stránka"
-        name: "home"
-        file: "content/homepage.json"
+      - label: "Typy pizze"
+        name: "pizzaTypes"
+        file: "content/pizza.json"
         fields:
-          - label: Kategória
-            name: category
-            widget: list
+          - label: "Pizze"
+            name: "pizza"
+            widget: "list"
             fields:
-              - { label: Názov, name: label, widget: string }
-              - { label: Popis, name: description, widget: string }
-              - label: Produkty
-                name: products
-                widget: list
+              - { label: "Názov", name: "label", widget: "string" }
+              - { label: "Popis", name: "description", widget: "string" }
+              - label: "Produkty"
+                name: "products"
+                widget: "list"
                 fields:
-                  - { label: Názov, name: label, widget: string }
-                  - { label: Číslo, name: number, widget: number }
-                  - { label: Popis, name: description, widget: string }
+                  - { label: "Názov", name: "label", widget: "string" }
+                  - { label: "Číslo", name: "number", widget: "number" }
+                  - { label: "Popis", name: "description", widget: "string" }
                   - {
-                      label: Gramáž,
-                      name: weight,
-                      widget: number,
+                      label: "Gramáž",
+                      name: "weight",
+                      widget: "number",
                       required: false,
                     }
                   - {
-                      label: Cena,
-                      name: price,
-                      widget: number,
+                      label: "Cena",
+                      name: "price",
+                      widget: "number",
                       value_type: "float",
                     }
+      - label: "Niečo iné z cesta"
+        name: "posuchy"
+        file: "content/posuchy.json"
+        fields:
+          - { label: "Názov", name: "label", widget: "string" }
+          - {
+              label: "Gramáž",
+              name: "weight",
+              widget: "number",
+              required: false,
+            }
+          - label: "Produkty"
+            name: "products"
+            widget: "list"
+            fields:
+              - { label: "Názov", name: "label", widget: "string" }
+              - {
+                  label: "Cena",
+                  name: "price",
+                  widget: "number",
+                  value_type: "float",
+                }
+      - label: "Panuozzo"
+        name: "panuozzo"
+        file: "content/panuozzo.json"
+        fields:
+          - label: "Panuozzo"
+            name: "panuozzo"
+            widget: "list"
+            fields:
+              - { label: "Názov", name: "label", widget: "string" }
+              - { label: "Popis", name: "description", widget: "string" }
+              - {
+                  label: "Gramáž",
+                  name: "weight",
+                  widget: "number",
+                  required: false,
+                }
+              - {
+                  label: "Cena",
+                  name: "price",
+                  widget: "number",
+                  value_type: "float",
+                }
+      - label: "Pizza tyčinky"
+        name: "pizzaSticks"
+        file: "content/sticks.json"
+        fields:
+          - { label: "Názov", name: "label", widget: "string" }
+          - { label: "Kusy", name: "pieces", widget: "number", required: false }
+          - label: "Produkty"
+            name: "products"
+            widget: "list"
+            fields:
+              - { label: "Názov", name: "label", widget: "string" }
+              - {
+                  label: "Cena",
+                  name: "price",
+                  widget: "number",
+                  value_type: "float",
+                }
+      - label: "Prílohy"
+        name: "additions"
+        file: "content/additions.json"
+        fields:
+          - label: "Prílohy"
+            name: "additions"
+            widget: "list"
+            fields:
+              - { label: "Prílohy", name: "label", widget: "string" }
+              - {
+                  label: "Cena",
+                  name: "price",
+                  widget: "number",
+                  value_type: "float",
+                }

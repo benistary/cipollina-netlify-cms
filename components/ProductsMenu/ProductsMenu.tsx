@@ -1,11 +1,11 @@
 import React from "react";
 import { styled } from "../../stitches.config";
-import { Products } from "../../types";
+import { PizzaProducts } from "../../types";
 import { toPrice } from "../../utils";
 import { P } from "../Typography/Typography";
 
 type ProductsMenu = {
-  products: Products;
+  products: PizzaProducts;
 };
 
 const Dl = styled("dl", {
