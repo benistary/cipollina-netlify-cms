@@ -10,6 +10,13 @@
           "description": "oregano, cesnak, olivový olej e.v.o",
           "weight": 400,
           "price": 5.9
+        },
+        {
+          "label": "MARGHERITA",
+          "weight": 450,
+          "price": 6.9,
+          "description": "mozzarella, bazalka, olivový olej e.v.o",
+          "number": 1
         }
       ]
     },
