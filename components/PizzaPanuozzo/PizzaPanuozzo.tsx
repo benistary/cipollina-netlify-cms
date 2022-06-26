@@ -1,11 +1,16 @@
 import React from "react";
 import { styled } from "../../stitches.config";
-import { PizzaProducts } from "../../types";
 import { toPrice } from "../../utils";
 import { P } from "../Typography/Typography";
 
-type ProductsMenu = {
-  products: PizzaProducts;
+type PizzaPanuozzo = {
+  products: {
+    label: string;
+    weight?: number;
+    description: string;
+    price: number;
+    number?: number;
+  }[];
 };
 
 const Dl = styled("dl", {
@@ -13,7 +18,7 @@ const Dl = styled("dl", {
   flexFlow: "row",
   flexWrap: "wrap",
   overflow: "visible",
-  margin: 0,
+  marginBottom: "$contentSpacing",
 });
 
 const Dt = styled("dt", {
@@ -21,6 +26,14 @@ const Dt = styled("dt", {
   textOverflow: "ellipsis",
   overflow: "hidden",
   marginBottom: "$xsmall",
+
+  "&:last-of-type": {
+    marginBottom: 0,
+
+    "& p:last-child": {
+      marginBottom: 0,
+    },
+  },
 });
 
 const Dd = styled("dd", {
@@ -33,7 +46,7 @@ const Dd = styled("dd", {
   marginInlineStart: 0,
 });
 
-const ProductsMenu: React.FC<ProductsMenu> = ({ products }) => {
+const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
   return (
     <Dl>
       {products.map(({ label, price, description, weight, number }, i) => (
@@ -46,7 +59,7 @@ const ProductsMenu: React.FC<ProductsMenu> = ({ products }) => {
                 marginBottom: 0,
               }}
             >
-              {number}. {label}
+              {typeof number === "number" ? `${number}.` : ""} {label}
             </P>
             <P css={{ marginBottom: "$xxsmall" }}>
               {weight ? <b>{weight}g · </b> : ""}
@@ -60,4 +73,4 @@ const ProductsMenu: React.FC<ProductsMenu> = ({ products }) => {
   );
 };
 
-export default ProductsMenu;
+export default PizzaPanuozzo;

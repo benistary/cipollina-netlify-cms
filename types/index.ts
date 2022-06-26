@@ -29,7 +29,7 @@ export type Panuozzo = {
     weight?: number;
     description: string;
     price: number;
-  };
+  }[];
 };
 
 export type Sticks = {

@@ -3,15 +3,17 @@ import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Logo from "../components/Logo/Logo";
 import PageSection from "../components/PageSection/PageSection";
-import ProductsMenu from "../components/ProductsMenu/ProductsMenu";
+import PizzaPanuozzo from "../components/PizzaPanuozzo/PizzaPanuozzo";
 import { H2 } from "../components/Typography/Typography";
-import { Pizza, Posuchy } from "../types";
+import { Panuozzo, Pizza, Posuchy } from "../types";
 import pizzaData from "../content/pizza.json";
-import otherData from "../content/other.json";
+import posuchyData from "../content/posuchy.json";
+import panuozzoData from "../content/panuozzo.json";
 
 function HomePage() {
   const { pizza } = pizzaData as Pizza;
-  const posuchy = otherData as Posuchy;
+  const posuchy = posuchyData as Posuchy;
+  const { panuozzo } = panuozzoData as Panuozzo;
 
   useEffect(() => {
     if (window && window.location.hash.includes("_token=")) {
@@ -53,14 +55,14 @@ function HomePage() {
                 key={label}
                 spaceTop="none"
                 spaceBottom="none"
-                css={{ marginBottom: "$contentSpacing" }}
+                // css={{ marginBottom: "$contentSpacing" }}
               >
                 <Row key={label}>
                   <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
                     <H2 css={{ marginBottom: "$xxxsmall" }}>{label}</H2>
                     <p>{description}</p>
 
-                    <ProductsMenu products={products} />
+                    <PizzaPanuozzo products={products} />
 
                     <hr />
                   </Col>
@@ -68,6 +70,19 @@ function HomePage() {
               </PageSection>
             );
           })}
+
+          <PageSection
+            spaceTop="none"
+            spaceBottom="none"
+            css={{ marginBottom: "$contentSpacing" }}
+          >
+            <Row>
+              <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+                <H2>Niečo iné z cesta</H2>
+                <PizzaPanuozzo products={panuozzo} />
+              </Col>
+            </Row>
+          </PageSection>
         </Container>
       </PageSection>
     </>
