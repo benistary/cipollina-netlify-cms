@@ -48,7 +48,7 @@ function HomePage() {
 
           {category.map(({ description, label, products }) => {
             const products2 = products.splice(
-              products.length / 2,
+              products.length / 2 + 1,
               products.length,
             );
 
