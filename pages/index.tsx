@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Logo from "../components/Logo/Logo";
@@ -52,21 +53,26 @@ function HomePage() {
             );
 
             return (
-              <>
-                <H2 css={{ marginBottom: "$xxxsmall" }}>{label}</H2>
-                <p>{description}</p>
+              <React.Fragment key={label}>
+                <PageSection
+                  spaceTop="none"
+                  spaceBottom="none"
+                  css={{ marginBottom: "$contentSpacing" }}
+                >
+                  <H2 css={{ marginBottom: "$xxxsmall" }}>{label}</H2>
+                  <p>{description}</p>
 
-                <Row key={label}>
-                  <Col md={6}>
-                    <ProductsMenu products={products} />
-                  </Col>
-                  <Col md={6}>
-                    <ProductsMenu products={products2} />
-                  </Col>
-                </Row>
-
+                  <Row key={label}>
+                    <Col md={6}>
+                      <ProductsMenu products={products} />
+                    </Col>
+                    <Col md={6}>
+                      <ProductsMenu products={products2} />
+                    </Col>
+                  </Row>
+                </PageSection>
                 <hr />
-              </>
+              </React.Fragment>
             );
           })}
         </Container>

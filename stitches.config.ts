@@ -72,7 +72,7 @@ const config = {
       small: "1.1666666666666667rem", // 21px
       default: "1.8888888888888888rem", // 34px
       large: "3.0555555555555554rem", // 55px
-      contentSpacing: "1.8888888888888888rem", // xlarge
+      contentSpacing: "1.8888888888888888rem", // 34px
     },
     radii: {
       infinite: "199950708px",

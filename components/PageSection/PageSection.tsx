@@ -8,7 +8,7 @@ const StyledPageSection = styled("section", {
         padding: `$large 0`,
       },
       none: {
-        padding: 0,
+        padding: "0 !important",
       },
     },
     spaceTop: {
@@ -16,7 +16,7 @@ const StyledPageSection = styled("section", {
         paddingTop: `$large`,
       },
       none: {
-        paddingTop: 0,
+        paddingTop: "0 !important",
       },
     },
     spaceBottom: {
@@ -24,7 +24,7 @@ const StyledPageSection = styled("section", {
         paddingBottom: `$large`,
       },
       none: {
-        paddingBottom: 0,
+        paddingBottom: "0 !important",
       },
     },
     color: {

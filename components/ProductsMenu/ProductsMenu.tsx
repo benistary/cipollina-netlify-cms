@@ -1,3 +1,4 @@
+import React from "react";
 import { styled } from "../../stitches.config";
 import { Products } from "../../types";
 import { toPrice } from "../../utils";
@@ -12,6 +13,7 @@ const Dl = styled("dl", {
   flexFlow: "row",
   flexWrap: "wrap",
   overflow: "visible",
+  margin: 0,
 });
 
 const Dt = styled("dt", {
@@ -35,7 +37,7 @@ const ProductsMenu: React.FC<ProductsMenu> = ({ products }) => {
   return (
     <Dl>
       {products.map(({ label, price, description, weight, number }, i) => (
-        <>
+        <React.Fragment key={label}>
           <Dt key={label}>
             <P
               css={{
@@ -52,33 +54,10 @@ const ProductsMenu: React.FC<ProductsMenu> = ({ products }) => {
             </P>
           </Dt>
           <Dd>{toPrice(price)}</Dd>
-        </>
+        </React.Fragment>
       ))}
     </Dl>
   );
 };
 
 export default ProductsMenu;
-
-// .dl--inline {
-//   display: flex;
-//   flex-flow: row;
-//   flex-wrap: wrap;
-//   overflow: visible;
-
-//   & :global(dt) {
-//     flex: 0 0 50%;
-//     text-overflow: ellipsis;
-//     overflow: hidden;
-//     margin-bottom: ${sizes.xsmall};
-//   }
-
-//   & :global(dd) {
-//     display: block;
-//     margin-top: auto;
-//     flex: 0 0 50%;
-//     text-overflow: ellipsis;
-//     overflow: hidden;
-//     margin-bottom: ${sizes.xsmall};
-//   }
-// }
