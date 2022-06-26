@@ -1,0 +1,10 @@
+{
+  "label": "PIZZA POSŮCH",
+  "weight": 300,
+  "products": [
+    {
+      "label": "s olivovým olejom a oreganom",
+      "price": 4
+    }
+  ]
+}

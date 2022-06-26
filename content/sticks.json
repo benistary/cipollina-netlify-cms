@@ -1,0 +1,10 @@
+{
+  "label": "PIZZA TYČINKY",
+  "pieces": 6,
+  "products": [
+    {
+      "label": "s cesnakovým olejom",
+      "price": 4
+    }
+  ]
+}

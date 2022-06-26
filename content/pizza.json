@@ -1,0 +1,29 @@
+{
+  "pizza": [
+    {
+      "label": "Pizze klasické",
+      "description": "(s paradajkovým základom)",
+      "products": [
+        {
+          "label": "MARINARA",
+          "number": 0,
+          "description": "oregano, cesnak, olivový olej e.v.o",
+          "weight": 400,
+          "price": 5.9
+        }
+      ]
+    },
+    {
+      "label": "Pizze Bianche/biele pizze",
+      "description": "(bez paradajkového základu)",
+      "products": [
+        {
+          "label": "QUATTRO FORMAGGI",
+          "number": 19,
+          "price": 8.5,
+          "description": "mozzarella, gorgonzola, ovčí syr pecorino, údený syr"
+        }
+      ]
+    }
+  ]
+}
