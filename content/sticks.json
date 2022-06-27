@@ -9,6 +9,14 @@
     {
       "label": "sladké tyčinky potreté maslom s cukrom",
       "price": 4.5
+    },
+    {
+      "label": "s nutelou",
+      "price": 5.5
+    },
+    {
+      "label": "s pistáciovým krémom",
+      "price": 6.5
     }
   ]
 }

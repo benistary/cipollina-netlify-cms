@@ -17,6 +17,125 @@
           "price": 6.9,
           "description": "mozzarella, bazalka, olivový olej e.v.o",
           "number": 1
+        },
+        {
+          "label": "CRUDO E RUCOLA",
+          "weight": 490,
+          "price": 8.9,
+          "description": "mozzarella, prosciutto crudo, rukola, parmezán, olivový olej e.v.o",
+          "number": 2
+        },
+        {
+          "label": "ŠUNKOVÁ S KUKURICOU",
+          "number": 3,
+          "weight": 500,
+          "price": 7.5,
+          "description": "mozzarella, šunka, kukurica"
+        },
+        {
+          "label": "PROSCIUTTO E FUNGHI",
+          "weight": 500,
+          "price": 7.9,
+          "description": "mozzarella, šunka, hríby",
+          "number": 4
+        },
+        {
+          "label": "DIAVOLA",
+          "weight": 500,
+          "price": 8.5,
+          "description": "mozzarella, pikantná saláma, chilli",
+          "number": 5
+        },
+        {
+          "label": "SALAMI",
+          "number": 6,
+          "weight": 499,
+          "price": 8.5,
+          "description": "mozzarella, saláma, artičoky"
+        },
+        {
+          "label": "CALABRESE",
+          "number": 7,
+          "weight": 550,
+          "price": 9.4,
+          "description": "mozzarella, pikantná saláma, olivy, grilovaná paprika, cesnak, chilli"
+        },
+        {
+          "label": "CARNIVORO",
+          "number": 8,
+          "description": "mozzarella, saláma, šunka, slanina, pečená cibuľa, parmezán",
+          "weight": 600,
+          "price": 10
+        },
+        {
+          "label": "TIROLESE",
+          "number": 9,
+          "description": "mozzarella, tirolský speck, dubáky, hľuzovkový olej",
+          "weight": 500,
+          "price": 10.5
+        },
+        {
+          "label": "CIPOLLINA",
+          "number": 10,
+          "description": "mozzarella, pikantná saláma, grilovaná paprika, slanina, pečená cibuľa",
+          "weight": 550,
+          "price": 9.4
+        },
+        {
+          "label": "NAPOLETANA",
+          "weight": 500,
+          "price": 9,
+          "description": "mozzarella, ančovičky, kapary, olivy",
+          "number": 11
+        },
+        {
+          "label": "CAPRICCIOSA",
+          "description": "mozzarella, šunka, hríby, artičoky, olivy, kapary",
+          "weight": 580,
+          "number": 12,
+          "price": 8.9
+        },
+        {
+          "label": "CALZONE SALAME (prekladaná)",
+          "number": 13,
+          "weight": 500,
+          "price": 8.5,
+          "description": "mozzarella, saláma, hríby"
+        },
+        {
+          "label": "CALZONE COTTO (prekladaná)",
+          "weight": 500,
+          "price": 7.5,
+          "description": "mozzarella, šunka",
+          "number": 14
+        },
+        {
+          "label": "MELANZANE ALLA PARMIGIANA",
+          "weight": 500,
+          "price": 8.5,
+          "number": 15,
+          "description": "mozzarella, grilovaný baklažán, parmezán, bazalka"
+        },
+        {
+          "label": "ANTONIO",
+          "number": 16,
+          "weight": 500,
+          "price": 8.9,
+          "description": "mozzarella, tuniak, kapary, cibuľa, oregano"
+        },
+        {
+          "label": "L E A",
+          "weight": 550,
+          "price": 9.5,
+          "description": "mozzarella, pikantná saláma, údený syr, gorgonzola, cesnak",
+          "number": 17
+        },
+        {
+          "label": "LA VERDURA",
+          "number": 18,
+          "weight": 500,
+          "price": 8,
+          "description": "grilovaná zelenina (cuketa, baklažán, paprika), rukola, olivový olej e.v.o"
         }
       ]
     },
@@ -29,6 +148,26 @@
           "number": 19,
           "price": 8.5,
           "description": "mozzarella, gorgonzola, ovčí syr pecorino, údený syr"
+        },
+        {
+          "label": "TARTUFO",
+          "weight": 490,
+          "price": 9.5,
+          "description": "mozzarella, údený syr, tirolský speck, hľuzovkový olej",
+          "number": 20
+        },
+        {
+          "label": "PANCETTA",
+          "number": 21,
+          "weight": 500,
+          "price": 8.9,
+          "description": "mozzarella, slanina, gorgonzola, cibuľa, kapary"
+        },
+        {
+          "label": "CACIO E PEPE",
+          "number": 22,
+          "description": "mozzarella, ovčí syr pecorino, drvené čierne korenie, olivový olej e.v.o",
+          "price": 8.4
         }
       ]
     }
