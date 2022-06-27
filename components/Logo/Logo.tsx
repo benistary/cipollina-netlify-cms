@@ -1,8 +1,6 @@
 import { colors, styled } from "../../stitches.config";
 
-const SVG = styled("svg", {
-  marginBottom: "$contentSpacing",
-});
+const SVG = styled("svg");
 
 type Logo = React.ComponentProps<typeof SVG>;
 

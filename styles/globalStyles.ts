@@ -107,7 +107,7 @@ const globalStyles = globalCss({
   },
 
   p: {
-    margin: `0 0 $contentSpacing 0`,
+    margin: `0 0 $small 0`,
     fontSize: "inherit",
     maxWidth: "66ch",
   },
@@ -187,7 +187,7 @@ const globalStyles = globalCss({
     border: 0,
     borderTop: "0.5px solid $brightGrey",
     marginTop: 0,
-    marginBottom: "$contentSpacing",
+    margin: "$contentSpacing 0",
   },
 
   [`@media (max-width: ${breakpoints.m}px)`]: {

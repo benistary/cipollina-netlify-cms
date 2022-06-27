@@ -16,7 +16,7 @@ type PizzaPanuozzo = {
 const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
   return (
     <Dl>
-      {products.map(({ label, price, description, weight, number }, i) => (
+      {products.map(({ label, price, description, weight, number }) => (
         <React.Fragment key={label}>
           <Dt key={label}>
             <P

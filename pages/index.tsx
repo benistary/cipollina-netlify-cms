@@ -72,11 +72,7 @@ function HomePage() {
             );
           })}
 
-          <PageSection
-            spaceTop="none"
-            spaceBottom="none"
-            // css={{ marginBottom: "$contentSpacing" }}
-          >
+          <PageSection spaceTop="none" spaceBottom="none">
             <Row>
               <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
                 <H2>Niečo iné z cesta</H2>
