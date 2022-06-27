@@ -1,7 +1,7 @@
 import React from "react";
-import { styled } from "../../stitches.config";
 import { toPrice } from "../../utils";
-import { P } from "../Typography/Typography";
+import { Dl, Dt, Dd } from "../Dl";
+import { P, Span } from "../Typography/Typography";
 
 type PizzaPanuozzo = {
   products: {
@@ -12,39 +12,6 @@ type PizzaPanuozzo = {
     number?: number;
   }[];
 };
-
-const Dl = styled("dl", {
-  display: "flex",
-  flexFlow: "row",
-  flexWrap: "wrap",
-  overflow: "visible",
-  marginBottom: "$contentSpacing",
-});
-
-const Dt = styled("dt", {
-  maxWidth: "80%",
-  textOverflow: "ellipsis",
-  overflow: "hidden",
-  marginBottom: "$xsmall",
-
-  "&:last-of-type": {
-    marginBottom: 0,
-
-    "& p:last-child": {
-      marginBottom: 0,
-    },
-  },
-});
-
-const Dd = styled("dd", {
-  display: "flex",
-  flex: 1,
-  justifyContent: "end",
-  fontSize: "$h4",
-  fontWeight: "$bold",
-  color: "$black",
-  marginInlineStart: 0,
-});
 
 const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
   return (
@@ -66,7 +33,13 @@ const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
               {description}
             </P>
           </Dt>
-          <Dd>{toPrice(price)}</Dd>
+          <Dd>
+            <Span
+              css={{ fontSize: "$h4", fontWeight: "$bold", color: "$black" }}
+            >
+              {toPrice(price)}
+            </Span>
+          </Dd>
         </React.Fragment>
       ))}
     </Dl>

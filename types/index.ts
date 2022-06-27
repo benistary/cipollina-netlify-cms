@@ -38,12 +38,12 @@ export type Sticks = {
   products: {
     label: string;
     price: number;
-  };
+  }[];
 };
 
 export type Additions = {
   additions: {
     label: string;
     price: number;
-  };
+  }[];
 };

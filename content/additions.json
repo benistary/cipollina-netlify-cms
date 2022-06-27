@@ -3,6 +3,22 @@
     {
       "label": "prosciutto crudo, tirolský speck, dubáky, ančovičky",
       "price": 2.5
+    },
+    {
+      "label": "slanina, saláma, tuniak, grilovaná zelenina",
+      "price": 1.7
+    },
+    {
+      "label": "mozzarella, parmezán, pecorino, gorgonzola, údený syr, šunka",
+      "price": 1.5
+    },
+    {
+      "label": "olivy, artičoky, kapary, pečená cibuľa, rukola, paradajková omáčka, hľuzovkový olej",
+      "price": 1
+    },
+    {
+      "label": "kukurica, hríby, cibuľa, cesnak",
+      "price": 0.5
     }
   ]
 }

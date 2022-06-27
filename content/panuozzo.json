@@ -5,6 +5,12 @@
       "price": 7.5,
       "weight": 300,
       "description": "mozzarella, prosciutto crudo, paradajka, rukola, parmezán"
+    },
+    {
+      "label": "PANUOZZO 2 (sendvič)",
+      "price": 6.9,
+      "weight": 300,
+      "description": "mozzarella, šunka, kukurica, rukola, parmezán"
     }
   ]
 }
