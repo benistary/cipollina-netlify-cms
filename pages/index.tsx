@@ -45,13 +45,23 @@ function HomePage() {
                   marginLeft: "auto",
                   marginRight: "auto",
                   width: "263px",
+                  marginBottom: "$default",
 
                   "@sm": {
                     width: "150px",
                   },
                 }}
               />
-              <hr />
+              {/* <hr /> */}
+
+              <p>
+                Naše cesto je výsledkom pomalého kysnutia. Zreje 2 dni, čo cestu
+                dodá arómu a chuť. Takto vyzreté cesto je pre organizmus ľahšie
+                stráviteľné. Používame výberové talianske suroviny.
+              </p>
+              <p>Pizza je naša vášeň, pripravujeme ju s láskou.</p>
+
+              {/* <hr /> */}
             </Col>
           </Row>
 
