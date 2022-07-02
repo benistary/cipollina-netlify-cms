@@ -1,73 +1,6 @@
 import { globalCss, breakpoints } from "../stitches.config";
 
-// @ts-ignore
 const globalStyles = globalCss({
-  // "@font-face": [
-  //   {
-  //     fontFamily: "$merriweather",
-  //     src: "url(/fonts/Merriweather-Bold.woff2) format('woff2'), url(/fonts/Merriweather-Bold.woff) format('woff')",
-  //     fontWeight: "$bold",
-  //     fontStyle: "normal",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$merriweather",
-  //     src: "url(/fonts/Merriweather-Regular.woff2) format('woff2'), url(/fonts/Merriweather-Regular.woff) format('woff')",
-  //     fontWeight: "$regular",
-  //     fontStyle: "normal",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$merriweather",
-  //     src: "url(/fonts/Merriweather-Light.woff2) format('woff2'), url(/fonts/Merriweather-Light.woff) format('woff')",
-  //     fontWeight: "$light",
-  //     fontStyle: "normal",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$merriweather",
-  //     src: "url(/fonts/Merriweather-Italic.woff2) format('woff2'), url(/fonts/Merriweather-Italic.woff) format('woff')",
-  //     fontWeight: "$regular",
-  //     fontStyle: "italic",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$montserrat",
-  //     src: "url(/fonts/Montserrat-Bold.woff2) format('woff2'), url(/fonts/Montserrat-Bold.woff) format('woff')",
-  //     fontWeight: "$bold",
-  //     fontStyle: "normal",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$montserrat",
-  //     src: "url(/fonts/Montserrat-SemiBold.woff2) format('woff2'), url(/fonts/Montserrat-SemiBold.woff) format('woff')",
-  //     fontWeight: "$semiBold",
-  //     fontStyle: "normal",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$montserrat",
-  //     src: "url(/fonts/Montserrat-Regular.woff2) format('woff2'), url(/fonts/Montserrat-Regular.woff) format('woff')",
-  //     fontWeight: "$regular",
-  //     fontStyle: "normal",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$montserrat",
-  //     src: "url(/fonts/Montserrat-Light.woff2) format('woff2'), url(/fonts/Montserrat-Light.woff) format('woff')",
-  //     fontWeight: "$light",
-  //     fontStyle: "normal",
-  //     fontDisplay: "swap",
-  //   },
-  //   {
-  //     fontFamily: "$montserrat",
-  //     src: "url(/fonts/Montserrat-Italic.woff2) format('woff2'), url(/fonts/Montserrat-Italic.woff) format('woff')",
-  //     fontWeight: "$regular",
-  //     fontStyle: "italic",
-  //     fontDisplay: "swap",
-  //   },
-  // ],
-
   "::selection": {
     backgroundColor: "$secondary",
     color: "$white",
@@ -83,7 +16,7 @@ const globalStyles = globalCss({
   },
 
   "html, body": {
-    fontFamily: "$syne",
+    fontFamily: "$lato",
     fontSize: "$base",
     lineHeight: "$base",
     color: "$black",
@@ -102,7 +35,7 @@ const globalStyles = globalCss({
   },
 
   input: {
-    fontFamily: "$syne",
+    fontFamily: "$lato",
     appearance: "none",
   },
 
@@ -113,31 +46,37 @@ const globalStyles = globalCss({
   },
 
   "h1, h2, h3, h4, h5, h6": {
-    fontFamily: "$syne",
+    fontFamily: "$lato",
   },
 
   h1: {
     fontSize: "$h1 !important",
+    lineHeight: "$h1",
     margin: `0 0 $default 0`,
   },
   h2: {
     fontSize: "$h2 !important",
+    lineHeight: "$h2",
     margin: `0 0 $small 0`,
   },
   h3: {
     fontSize: "$h3 !important",
+    lineHeight: "$h3",
     margin: `0 0 $xsmall 0`,
   },
   h4: {
     fontSize: "$h4 !important",
+    lineHeight: "$h4",
     margin: `0 0 $xxsmall 0`,
   },
   h5: {
     fontSize: "$h5 !important",
+    lineHeight: "$h5",
     margin: `0 0 $xxxsmall 0`,
   },
   h6: {
     fontSize: "$h6 !important",
+    lineHeight: "$h6",
   },
 
   "ul, ol": {

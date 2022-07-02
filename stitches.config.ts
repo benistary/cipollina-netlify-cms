@@ -26,7 +26,7 @@ const config = {
       montserrat: "Montserrat",
       merriweather: "Merriweather",
       cormorantGaramond: "'Cormorant Garamond', serif",
-      syne: "'Lato', sans-serif",
+      lato: "'Lato', sans-serif",
     },
     colors: {
       primary: "#BE312B",
@@ -63,17 +63,22 @@ const config = {
       bold: 700,
     },
     lineHeights: {
-      // base: 1.8888888888888888,
-      base: 1.4,
+      base: "1.8125rem",
+      h1: "4.4375rem", // 71px
+      h2: "3.5625rem", // 57px
+      h3: "2.8125rem", // 45px
+      h4: "2.3125rem", // 37px
+      h5: "1.8125rem", // 29px
+      h6: "1.5rem", // 24x
     },
     space: {
-      xxxsmall: "0.2777777777777778rem", // 5px
-      xxsmall: "0.4444444444444444rem", // 8px
-      xsmall: "0.7222222222222222rem", // 13px
-      small: "1.1666666666666667rem", // 21px
-      default: "1.8888888888888888rem", // 34px
-      large: "3.0555555555555554rem", // 55px
-      contentSpacing: "3.0555555555555554rem", // 55px
+      xxxsmall: "0.2222rem", // 4px
+      xxsmall: "0.3889rem", // 7px
+      xsmall: "0.6111rem", // 11px
+      small: "1rem", // 18px
+      default: "1.6111rem", // 29px
+      large: "2.6111rem", // 47px
+      contentSpacing: "2.6111rem", // 47px
     },
     radii: {
       infinite: "199950708px",
