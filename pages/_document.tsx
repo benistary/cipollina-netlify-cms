@@ -14,51 +14,10 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
             rel="stylesheet"
           />
-          {/* <link
-            rel="preload"
-            href="/fonts/Merriweather-Bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Merriweather-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Merriweather-Light.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Montserrat-Bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Montserrat-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Montserrat-Light.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          /> */}
+
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
