@@ -99,6 +99,7 @@ function HomePage() {
                 <P
                   css={{
                     fontSize: "$h4",
+                    lineHeight: "$h4",
                     fontWeight: "$bold",
                     marginBottom: 0,
                   }}
@@ -108,7 +109,13 @@ function HomePage() {
                 <Dl>
                   {posuchy.products.map(({ label, price }) => (
                     <React.Fragment key={label}>
-                      <Dt css={{ fontSize: "$h4", marginBottom: 0 }}>
+                      <Dt
+                        css={{
+                          fontSize: "$h4",
+                          lineHeight: "$h4",
+                          marginBottom: 0,
+                        }}
+                      >
                         {label}
                       </Dt>
                       <Dd>
@@ -132,6 +139,7 @@ function HomePage() {
                 <P
                   css={{
                     fontSize: "$h4",
+                    lineHeight: "$h4",
                     fontWeight: "$bold",
                     marginBottom: 0,
                   }}
@@ -141,7 +149,13 @@ function HomePage() {
                 <Dl>
                   {sticks.products.map(({ label, price }) => (
                     <React.Fragment key={label}>
-                      <Dt css={{ fontSize: "$h4", marginBottom: 0 }}>
+                      <Dt
+                        css={{
+                          fontSize: "$h4",
+                          lineHeight: "$h4",
+                          marginBottom: 0,
+                        }}
+                      >
                         {label}
                       </Dt>
                       <Dd>
@@ -177,7 +191,9 @@ function HomePage() {
                 <Dl>
                   {additions.map(({ label, price }) => (
                     <React.Fragment key={label}>
-                      <Dt css={{ fontSize: "$h4" }}>{label}</Dt>
+                      <Dt css={{ fontSize: "$h4", lineHeight: "$h4" }}>
+                        {label}
+                      </Dt>
                       <Dd>
                         <Span
                           css={{
