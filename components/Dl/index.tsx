@@ -25,7 +25,7 @@ export const Dt = styled("dt", {
   flex: "0 0 calc(75% - $space$xsmall)",
   textOverflow: "ellipsis",
   overflow: "hidden",
-  marginBottom: "$xsmall",
+  marginBottom: "$small",
   marginRight: "$xsmall",
 
   "&:last-of-type": {

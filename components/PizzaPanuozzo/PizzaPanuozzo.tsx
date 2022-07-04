@@ -28,7 +28,7 @@ const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
             >
               {typeof number === "number" ? `${number}.` : ""} {label}
             </P>
-            <P css={{ marginBottom: "$xxsmall" }}>
+            <P css={{ marginBottom: "$small" }}>
               {weight ? <b>{weight}g · </b> : ""}
               {description}
             </P>

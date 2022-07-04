@@ -54,6 +54,7 @@ function HomePage() {
                   fontStyle: "italic",
                   // color: "$grey",
                   // textAlign: "center",
+                  marginBottom: "$small",
                 }}
               >
                 Naše cesto je výsledkom pomalého kysnutia. Zreje 2 dni, čo cestu
@@ -69,8 +70,6 @@ function HomePage() {
               >
                 Pizza je naša vášeň, pripravujeme ju s láskou.
               </P>
-
-              {/* <hr /> */}
             </Col>
           </Row>
 
@@ -220,7 +219,7 @@ function HomePage() {
           >
             <Row>
               <Col
-                xs={{ span: 6, offset: 3 }}
+                xs={{ span: 8, offset: 2 }}
                 sm={{ span: 6, offset: 0 }}
                 md={4}
                 lg={3}
@@ -229,6 +228,7 @@ function HomePage() {
                   css={{
                     "& dt": {
                       flex: "0 0 calc(40% - $space$xsmall)",
+                      marginBottom: "$xxsmall",
                     },
                     "& dd": {
                       flex: "0 0 60%",

@@ -40,7 +40,7 @@ const globalStyles = globalCss({
   },
 
   p: {
-    margin: `0 0 $small 0`,
+    margin: `0 0 $default 0`,
     fontSize: "inherit",
     maxWidth: "66ch",
   },

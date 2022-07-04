@@ -26,7 +26,7 @@ const config = {
       montserrat: "Montserrat",
       merriweather: "Merriweather",
       cormorantGaramond: "'Cormorant Garamond', serif",
-      lato: "'Lato', sans-serif",
+      lato: "'Inter', sans-serif",
     },
     colors: {
       primary: "#BE312B",
