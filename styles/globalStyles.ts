@@ -90,9 +90,10 @@ const globalStyles = globalCss({
 
   a: {
     color: "$black",
-    textDecoration: "none",
+    textDecoration: "underline",
     "&:hover": {
-      textDecoration: "underline",
+      textDecoration: "none",
+      color: "$primary",
     },
   },
 

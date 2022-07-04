@@ -7,13 +7,26 @@ export const Dl = styled("dl", {
   overflow: "visible",
   margin: 0,
   marginBottom: "$contentSpacing",
+
+  variants: {
+    vertical: {
+      true: {
+        display: "block",
+
+        "& dt, & dd": {
+          display: "block",
+          marginRight: 0,
+        },
+      },
+    },
+  },
 });
 export const Dt = styled("dt", {
-  // maxWidth: "80%",
-  flex: "0 0 80%",
+  flex: "0 0 calc(75% - $space$xsmall)",
   textOverflow: "ellipsis",
   overflow: "hidden",
   marginBottom: "$xsmall",
+  marginRight: "$xsmall",
 
   "&:last-of-type": {
     marginBottom: 0,
@@ -25,7 +38,7 @@ export const Dt = styled("dt", {
 });
 export const Dd = styled("dd", {
   display: "flex",
-  flex: 1,
+  flex: "0 0 25%",
   justifyContent: "end",
   marginInlineStart: 0,
 });
