@@ -1,10 +1,15 @@
 module.exports = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.md$/,
-      use: "frontmatter-markdown-loader",
-    });
-
-    return config;
+  async headers() {
+    return [
+      {
+        source: "/fonts/:font*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, immutable, max-age=31536000",
+          },
+        ],
+      },
+    ];
   },
 };
