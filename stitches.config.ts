@@ -48,13 +48,14 @@ const config = {
     },
     fontSizes: {
       base: "18px",
-      small: "16px",
-      h1: "2.611111111111111rem", // 47px
-      h2: "2.0555555555555554rem", // 37px
-      h3: "1.6111111111111112rem", // 29px
-      h4: "1.2777777777777777rem", // 23px
-      h5: "1rem", // 18px
-      h6: "0.7777777777777778rem", // 14px
+      mobile: "16px",
+      h1: "2.488rem", // 44.79px
+      h2: "2.074rem", // 37.32px
+      h3: "1.728rem", // 31.10px
+      h4: "1.44rem", // 25.92px
+      h5: "1.2rem", // 21.60px
+      h6: "1rem", // 18.00px
+      small: "0.833rem", // 15.00px
     },
     fontWeights: {
       light: 300,
@@ -63,22 +64,23 @@ const config = {
       bold: 700,
     },
     lineHeights: {
-      base: "1.8125rem",
-      h1: "4.4375rem", // 71px
-      h2: "3.5625rem", // 57px
-      h3: "2.8125rem", // 45px
-      h4: "2.3125rem", // 37px
-      h5: "1.8125rem", // 29px
-      h6: "1.5rem", // 24x
+      base: "1.5", //24px
+      h1: "1.5", // 48px
+      h2: "1.5", // 44px
+      h3: "1.5", // 36px
+      h4: "1.5", // 32px
+      h5: "1.5", // 28px
+      h6: "1.5", // 24px
     },
     space: {
-      xxxsmall: "0.2222rem", // 4px
-      xxsmall: "0.3889rem", // 7px
-      xsmall: "0.6111rem", // 11px
-      small: "1rem", // 18px
-      default: "1.6111rem", // 29px
-      large: "2.6111rem", // 47px
-      contentSpacing: "2.6111rem", // 47px
+      xsmall: "0.2222rem", // 4px
+      small: "0.4444rem", // 8px
+      default: "0.8889rem", // 16px
+      large: "1.3333rem", // 24px
+      xlarge: "1.7778rem", // 32px
+      xxlarge: "2.2222rem", // 40px
+      xxxlarge: "2.6667rem", // 48px
+      contentSpacing: "1.3333rem", // 24px
     },
     radii: {
       infinite: "199950708px",

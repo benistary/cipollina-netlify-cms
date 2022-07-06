@@ -4,6 +4,7 @@ import { Dl, Dt, Dd } from "../Dl";
 import Bar from "../Bar/Bar";
 import BarItem from "../Bar/BarItem";
 import { P, Span } from "../Typography/Typography";
+import { CSS } from "@stitches/react";
 
 type PizzaPanuozzo = {
   products: {
@@ -13,11 +14,12 @@ type PizzaPanuozzo = {
     price: number;
     number?: number;
   }[];
+  css?: CSS;
 };
 
-const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
+const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products, ...other }) => {
   return (
-    <Dl>
+    <Dl css={{ marginBottom: 0 }} {...other}>
       {products.map(({ label, price, description, weight, number }) => (
         <React.Fragment key={label}>
           <Dt key={label}>
@@ -25,12 +27,12 @@ const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
               {typeof number === "number" && (
                 <BarItem
                   css={{
-                    width: "1.5rem",
+                    width: "1.6rem",
                   }}
                 >
                   <Span
                     css={{
-                      fontSize: "$h4",
+                      fontSize: "$h5",
                       fontWeight: "$bold",
                       marginBottom: 0,
                     }}
@@ -42,7 +44,7 @@ const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
               <BarItem isFilling>
                 <Span
                   css={{
-                    fontSize: "$h4",
+                    fontSize: "$h5",
                     fontWeight: "$bold",
                     marginBottom: 0,
                   }}
@@ -58,7 +60,7 @@ const PizzaPanuozzo: React.FC<PizzaPanuozzo> = ({ products }) => {
           </Dt>
           <Dd>
             <Span
-              css={{ fontSize: "$h4", fontWeight: "$bold", color: "$black" }}
+              css={{ fontSize: "$h5", fontWeight: "$bold", color: "$black" }}
             >
               {toPrice(price)}
             </Span>

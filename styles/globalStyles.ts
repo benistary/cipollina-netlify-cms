@@ -40,8 +40,9 @@ const globalStyles = globalCss({
   },
 
   p: {
-    margin: `0 0 $default 0`,
-    fontSize: "inherit",
+    margin: `0 0 $contentSpacing 0`,
+    fontSize: "$base",
+    lineHeight: "$base",
     maxWidth: "66ch",
   },
 
@@ -52,27 +53,27 @@ const globalStyles = globalCss({
   h1: {
     fontSize: "$h1 !important",
     lineHeight: "$h1",
-    margin: `0 0 $default 0`,
+    margin: `0 0 $contentSpacing 0`,
   },
   h2: {
     fontSize: "$h2 !important",
     lineHeight: "$h2",
-    margin: `0 0 $small 0`,
+    margin: `0 0 $contentSpacing 0`,
   },
   h3: {
     fontSize: "$h3 !important",
     lineHeight: "$h3",
-    margin: `0 0 $xsmall 0`,
+    margin: `0 0 $contentSpacing 0`,
   },
   h4: {
     fontSize: "$h4 !important",
     lineHeight: "$h4",
-    margin: `0 0 $xxsmall 0`,
+    margin: `0 0 $contentSpacing 0`,
   },
   h5: {
     fontSize: "$h5 !important",
     lineHeight: "$h5",
-    margin: `0 0 $xxxsmall 0`,
+    margin: `0 0 $contentSpacing 0`,
   },
   h6: {
     fontSize: "$h6 !important",
@@ -97,49 +98,18 @@ const globalStyles = globalCss({
     },
   },
 
-  figure: {
-    textAlign: "center",
-    fontSize: "$small",
-    margin: 0,
-    padding: 0,
-    marginBottom: "$small",
-
-    "&.wp-block-image": {
-      marginBottom: "$contentSpacing",
-    },
-  },
-
-  figCaption: {
-    color: "$grey",
-    marginTop: `-$small`,
-    marginBottom: "$default",
-  },
-
-  blockquote: {
-    fontStyle: "italic",
-    "& p": {
-      marginBottom: "$xxxsmall",
-    },
-    marginBottom: "$contentSpacing",
-  },
-
   hr: {
     border: 0,
     borderTop: "0.5px solid $black",
     marginTop: 0,
-    margin: "$contentSpacing 0",
+    margin: "0 0",
   },
 
   [`@media (max-width: ${breakpoints.m}px)`]: {
     "html, body": {
-      fontSize: "$small",
+      fontSize: "$mobile",
     },
   },
-  // [`@media (max-width: ${breakpoints.l}px)`]: {
-  //   "html #main-layout": {
-  //     paddingTop: `${HEADER_HEIGHT.mobile}px`,
-  //   },
-  // },
 });
 
 export default globalStyles;

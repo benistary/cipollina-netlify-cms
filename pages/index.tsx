@@ -30,7 +30,7 @@ function HomePage() {
 
   return (
     <>
-      <PageSection>
+      <PageSection spaceBottom="none">
         <Container>
           <Row>
             <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
@@ -40,21 +40,17 @@ function HomePage() {
                   marginLeft: "auto",
                   marginRight: "auto",
                   width: "263px",
-                  marginBottom: "$default",
+                  marginBottom: "$contentSpacing",
 
                   "@sm": {
                     width: "150px",
                   },
                 }}
               />
-              {/* <hr /> */}
 
               <P
                 css={{
                   fontStyle: "italic",
-                  // color: "$grey",
-                  // textAlign: "center",
-                  marginBottom: "$small",
                 }}
               >
                 Naše cesto je výsledkom pomalého kysnutia. Zreje 2 dni, čo cestu
@@ -64,153 +60,175 @@ function HomePage() {
               <P
                 css={{
                   fontStyle: "italic",
-                  // color: "$grey",
-                  // textAlign: "center",
+                  marginBottom: 0,
                 }}
               >
                 Pizza je naša vášeň, pripravujeme ju s láskou.
               </P>
             </Col>
           </Row>
-
-          {pizza.map(({ description, label, products }) => {
-            return (
-              <PageSection key={label} spaceTop="none" spaceBottom="none">
-                <Row key={label}>
-                  <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
-                    <H2 css={{ marginBottom: "$xxxsmall" }}>{label}</H2>
-                    <p>{description}</p>
-
-                    <PizzaPanuozzo products={products} />
-
-                    <hr />
-                  </Col>
-                </Row>
-              </PageSection>
-            );
-          })}
-
-          <PageSection spaceTop="none" spaceBottom="none">
-            <Row>
-              <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
-                <H2>Niečo iné z cesta</H2>
-
-                <P
-                  css={{
-                    fontSize: "$h4",
-                    lineHeight: "$h4",
-                    fontWeight: "$bold",
-                    marginBottom: 0,
-                  }}
-                >
-                  {posuchy.label} · {posuchy.weight}g
-                </P>
-                <Dl>
-                  {posuchy.products.map(({ label, price }) => (
-                    <React.Fragment key={label}>
-                      <Dt
-                        css={{
-                          fontSize: "$h4",
-                          lineHeight: "$h4",
-                          marginBottom: 0,
-                        }}
-                      >
-                        {label}
-                      </Dt>
-                      <Dd>
-                        <Span
-                          css={{
-                            fontSize: "$h4",
-                            lineHeight: "$h4",
-                            fontWeight: "$bold",
-                            color: "$black",
-                          }}
-                        >
-                          {toPrice(price)}
-                        </Span>
-                      </Dd>
-                    </React.Fragment>
-                  ))}
-                </Dl>
-
-                <PizzaPanuozzo products={panuozzo} />
-
-                <P
-                  css={{
-                    fontSize: "$h4",
-                    lineHeight: "$h4",
-                    fontWeight: "$bold",
-                    marginBottom: 0,
-                  }}
-                >
-                  {sticks.label} ({sticks.pieces}ks)
-                </P>
-                <Dl>
-                  {sticks.products.map(({ label, price }) => (
-                    <React.Fragment key={label}>
-                      <Dt
-                        css={{
-                          fontSize: "$h4",
-                          lineHeight: "$h4",
-                          marginBottom: 0,
-                        }}
-                      >
-                        {label}
-                      </Dt>
-                      <Dd>
-                        <Span
-                          css={{
-                            fontSize: "$h4",
-                            lineHeight: "$h4",
-                            fontWeight: "$bold",
-                            color: "$black",
-                          }}
-                        >
-                          {toPrice(price)}
-                        </Span>
-                      </Dd>
-                    </React.Fragment>
-                  ))}
-                </Dl>
-
-                <hr />
-              </Col>
-            </Row>
-          </PageSection>
-
-          <PageSection spaceTop="none" spaceBottom="none">
-            <Row>
-              <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
-                <H2>Prílohy</H2>
-
-                <Dl css={{ marginBottom: 0 }}>
-                  {additions.map(({ label, price }) => (
-                    <React.Fragment key={label}>
-                      <Dt css={{ fontSize: "$h4", lineHeight: "$h4" }}>
-                        {label}
-                      </Dt>
-                      <Dd>
-                        <Span
-                          css={{
-                            fontSize: "$h4",
-                            lineHeight: "$h4",
-                            fontWeight: "$bold",
-                            color: "$black",
-                          }}
-                        >
-                          {toPrice(price)}
-                        </Span>
-                      </Dd>
-                    </React.Fragment>
-                  ))}
-                </Dl>
-              </Col>
-            </Row>
-          </PageSection>
         </Container>
       </PageSection>
 
-      <PageSection backgroundColor="black" spaceBottom="none">
+      {pizza.map(({ description, label, products }) => {
+        return (
+          <React.Fragment key={label}>
+            <PageSection>
+              <Container>
+                <Row key={label}>
+                  <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+                    <H2 css={{ marginBottom: "$small" }}>{label}</H2>
+                    <p>{description}</p>
+
+                    <PizzaPanuozzo products={products} />
+                  </Col>
+                </Row>
+              </Container>
+            </PageSection>
+            <Container>
+              <Row>
+                <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+                  <hr />
+                </Col>
+              </Row>
+            </Container>
+          </React.Fragment>
+        );
+      })}
+
+      <PageSection>
+        <Container>
+          <Row>
+            <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+              <H2>Niečo iné z cesta</H2>
+
+              <P
+                css={{
+                  fontSize: "$h5",
+                  lineHeight: "$h5",
+                  fontWeight: "$bold",
+                  marginBottom: 0,
+                }}
+              >
+                {posuchy.label} · {posuchy.weight}g
+              </P>
+
+              <Dl css={{ marginBottom: "$xxxlarge" }}>
+                {posuchy.products.map(({ label, price }) => (
+                  <React.Fragment key={label}>
+                    <Dt
+                      css={{
+                        fontSize: "$h5",
+                        lineHeight: "$h5",
+                        marginBottom: "$small",
+                      }}
+                    >
+                      {label}
+                    </Dt>
+                    <Dd>
+                      <Span
+                        css={{
+                          fontSize: "$h5",
+                          lineHeight: "$h5",
+                          fontWeight: "$bold",
+                          color: "$black",
+                        }}
+                      >
+                        {toPrice(price)}
+                      </Span>
+                    </Dd>
+                  </React.Fragment>
+                ))}
+              </Dl>
+
+              <PizzaPanuozzo
+                products={panuozzo}
+                css={{ marginBottom: "$xxxlarge" }}
+              />
+
+              <P
+                css={{
+                  fontSize: "$h5",
+                  lineHeight: "$h5",
+                  fontWeight: "$bold",
+                  marginBottom: 0,
+                }}
+              >
+                {sticks.label} ({sticks.pieces}ks)
+              </P>
+              <Dl css={{ marginBottom: 0 }}>
+                {sticks.products.map(({ label, price }) => (
+                  <React.Fragment key={label}>
+                    <Dt
+                      css={{
+                        fontSize: "$h5",
+                        lineHeight: "$h5",
+                        marginBottom: "$small",
+                      }}
+                    >
+                      {label}
+                    </Dt>
+                    <Dd>
+                      <Span
+                        css={{
+                          fontSize: "$h5",
+                          lineHeight: "$h5",
+                          fontWeight: "$bold",
+                          color: "$black",
+                        }}
+                      >
+                        {toPrice(price)}
+                      </Span>
+                    </Dd>
+                  </React.Fragment>
+                ))}
+              </Dl>
+            </Col>
+          </Row>
+        </Container>
+      </PageSection>
+
+      <Container>
+        <Row>
+          <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+            <hr />
+          </Col>
+        </Row>
+      </Container>
+
+      <PageSection>
+        <Container>
+          <Row>
+            <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+              <H2>Prílohy</H2>
+
+              <Dl css={{ marginBottom: 0 }}>
+                {additions.map(({ label, price }) => (
+                  <React.Fragment key={label}>
+                    <Dt css={{ fontSize: "$h5", lineHeight: "$h5" }}>
+                      {label}
+                    </Dt>
+                    <Dd>
+                      <Span
+                        css={{
+                          fontSize: "$h5",
+                          lineHeight: "$h5",
+                          fontWeight: "$bold",
+                          color: "$black",
+                        }}
+                      >
+                        {toPrice(price)}
+                      </Span>
+                    </Dd>
+                  </React.Fragment>
+                ))}
+              </Dl>
+            </Col>
+          </Row>
+        </Container>
+      </PageSection>
+
+      <PageSection backgroundColor="black">
         <Container>
           <Row>
             <Col
