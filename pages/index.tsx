@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import Logo from "../components/Logo/Logo";
 import PageSection from "../components/PageSection/PageSection";
 import PizzaPanuozzo from "../components/PizzaPanuozzo/PizzaPanuozzo";
@@ -14,6 +13,7 @@ import additionsData from "../content/additions.json";
 import { Dd, Dl, Dt } from "../components/Dl";
 import { toPhoneNumber, toPrice } from "../utils";
 import Link from "next/link";
+import { Col, Container, Row } from "../components/Grid";
 
 function HomePage() {
   const { pizza } = pizzaData as Pizza;
@@ -241,7 +241,7 @@ function HomePage() {
                 css={{
                   "& dt": {
                     flex: "0 0 calc(40% - $space$xsmall)",
-                    marginBottom: "$xxsmall",
+                    marginBottom: "$xsmall",
                   },
                   "& dd": {
                     flex: "0 0 60%",
@@ -290,7 +290,10 @@ function HomePage() {
               </Dl>
             </Col>
             <Col sm={6} md={4} lg={3}>
-              <Dl vertical css={{ textAlign: "center" }}>
+              <Dl
+                vertical
+                css={{ textAlign: "center", marginBottom: "$xxxlarge" }}
+              >
                 <Dd>
                   <b>Sociálne siete</b>
                 </Dd>
@@ -313,6 +316,26 @@ function HomePage() {
                   </Link>
                 </Dt>
               </Dl>
+            </Col>
+
+            <Col css={{ display: "flex", justifyContent: "center" }}>
+              <P
+                css={{
+                  marginBottom: 0,
+                  textAlign: "center",
+                  fontSize: "$small",
+                }}
+              >
+                © CIPOLLINA s. r. o. {new Date().getFullYear()}. Všetky práva
+                vyhradené.
+                <br />
+                Vytvoril{" "}
+                <Link href="https://linktr.ee/benjamin.stary">
+                  <a rel="noopener noreferrer" target="_blank">
+                    @benjamin.stary
+                  </a>
+                </Link>
+              </P>
             </Col>
           </Row>
         </Container>
