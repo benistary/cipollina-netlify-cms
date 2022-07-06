@@ -34,6 +34,13 @@ const StyledPageSection = styled("section", {
       brightGrey: {
         backgroundColor: "$brightGrey",
       },
+      black: {
+        backgroundColor: "$black",
+
+        "& *": {
+          color: "$white",
+        },
+      },
     },
   },
 
@@ -49,7 +56,7 @@ const StyledPageSection = styled("section", {
 type Sizes = "none" | "default";
 
 type PageSection = React.ComponentProps<typeof StyledPageSection> & {
-  backgroundColor?: "brightGrey" | "white";
+  backgroundColor?: "brightGrey" | "white" | "black";
   space?: Sizes;
   spaceTop?: Sizes;
   spaceBottom?: Sizes;

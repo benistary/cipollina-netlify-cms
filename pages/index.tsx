@@ -178,16 +178,12 @@ function HomePage() {
             </Row>
           </PageSection>
 
-          <PageSection
-            spaceTop="none"
-            spaceBottom="none"
-            css={{ marginBottom: "$contentSpacing" }}
-          >
+          <PageSection spaceTop="none" spaceBottom="none">
             <Row>
               <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
                 <H2>Prílohy</H2>
 
-                <Dl>
+                <Dl css={{ marginBottom: 0 }}>
                   {additions.map(({ label, price }) => (
                     <React.Fragment key={label}>
                       <Dt css={{ fontSize: "$h4", lineHeight: "$h4" }}>
@@ -211,98 +207,96 @@ function HomePage() {
               </Col>
             </Row>
           </PageSection>
+        </Container>
+      </PageSection>
 
-          <PageSection
-            spaceTop="none"
-            spaceBottom="none"
-            css={{ marginBottom: "$contentSpacing" }}
-          >
-            <Row>
-              <Col
-                xs={{ span: 8, offset: 2 }}
-                sm={{ span: 6, offset: 0 }}
-                md={4}
-                lg={3}
+      <PageSection backgroundColor="black" spaceBottom="none">
+        <Container>
+          <Row>
+            <Col
+              xs={{ span: 8, offset: 2 }}
+              sm={{ span: 6, offset: 0 }}
+              md={4}
+              lg={3}
+            >
+              <Dl
+                css={{
+                  "& dt": {
+                    flex: "0 0 calc(40% - $space$xsmall)",
+                    marginBottom: "$xxsmall",
+                  },
+                  "& dd": {
+                    flex: "0 0 60%",
+                  },
+                }}
               >
-                <Dl
+                <Dt>
+                  <b>UT-ŠT</b>
+                </Dt>
+                <Dd>16:00 - 20:00</Dd>
+                <Dt>
+                  <b>PI-SO</b>
+                </Dt>
+                <Dd>16:00 - 22:00</Dd>
+                <Dt>
+                  <b>NE-PO</b>
+                </Dt>
+                <Dd>ZATVORENÉ</Dd>
+              </Dl>
+            </Col>
+            <Col sm={6} md={4} lg={3}>
+              <Dl vertical css={{ textAlign: "center" }}>
+                <Dd>
+                  <b>Objednávky</b>
+                </Dd>
+                <Dt>
+                  <Link href={`tel:${toPhoneNumber("910 643 980")}`}>
+                    <a rel="noopener noreferrer">910 643 980</a>
+                  </Link>
+                </Dt>
+              </Dl>
+            </Col>
+            <Col sm={6} md={4} lg={3}>
+              <Dl vertical css={{ textAlign: "center" }}>
+                <Dd>
+                  <b>Adresa</b>
+                </Dd>
+                <Dt>
+                  <Link href="https://goo.gl/maps/MvTJ1TeQ5dmXs1Sk7">
+                    <a rel="noopener noreferrer" target="_blank">
+                      Bývalá Viecha <br />
+                      Hlavná 46/2, 927 01 Šaľa
+                    </a>
+                  </Link>
+                </Dt>
+              </Dl>
+            </Col>
+            <Col sm={6} md={4} lg={3}>
+              <Dl vertical css={{ textAlign: "center" }}>
+                <Dd>
+                  <b>Sociálne siete</b>
+                </Dd>
+                <Dt
                   css={{
-                    "& dt": {
-                      flex: "0 0 calc(40% - $space$xsmall)",
-                      marginBottom: "$xxsmall",
-                    },
-                    "& dd": {
-                      flex: "0 0 60%",
+                    "& a": {
+                      display: "block",
                     },
                   }}
                 >
-                  <Dt>
-                    <b>UT-ŠT</b>
-                  </Dt>
-                  <Dd>16:00 - 20:00</Dd>
-                  <Dt>
-                    <b>PI-SO</b>
-                  </Dt>
-                  <Dd>16:00 - 22:00</Dd>
-                  <Dt>
-                    <b>NE-PO</b>
-                  </Dt>
-                  <Dd>ZATVORENÉ</Dd>
-                </Dl>
-              </Col>
-              <Col sm={6} md={4} lg={3}>
-                <Dl vertical css={{ textAlign: "center" }}>
-                  <Dd>
-                    <b>Objednávky</b>
-                  </Dd>
-                  <Dt>
-                    <Link href={`tel:${toPhoneNumber("910 643 980")}`}>
-                      <a rel="noopener noreferrer">910 643 980</a>
-                    </Link>
-                  </Dt>
-                </Dl>
-              </Col>
-              <Col sm={6} md={4} lg={3}>
-                <Dl vertical css={{ textAlign: "center" }}>
-                  <Dd>
-                    <b>Adresa</b>
-                  </Dd>
-                  <Dt>
-                    <Link href="https://goo.gl/maps/MvTJ1TeQ5dmXs1Sk7">
-                      <a rel="noopener noreferrer" target="_blank">
-                        Bývalá Viecha <br />
-                        Hlavná 46/2, 927 01 Šaľa
-                      </a>
-                    </Link>
-                  </Dt>
-                </Dl>
-              </Col>
-              <Col sm={6} md={4} lg={3}>
-                <Dl vertical css={{ textAlign: "center" }}>
-                  <Dd>
-                    <b>Sociálne siete</b>
-                  </Dd>
-                  <Dt
-                    css={{
-                      "& a": {
-                        display: "block",
-                      },
-                    }}
-                  >
-                    <Link href="https://www.facebook.com/PizzaCipollina">
-                      <a rel="noopener noreferrer" target="_blank">
-                        Facebook
-                      </a>
-                    </Link>
-                    <Link href="https://www.instagram.com/pizzacipollina/">
-                      <a rel="noopener noreferrer" target="_blank">
-                        Instagram
-                      </a>
-                    </Link>
-                  </Dt>
-                </Dl>
-              </Col>
-            </Row>
-          </PageSection>
+                  <Link href="https://www.facebook.com/PizzaCipollina">
+                    <a rel="noopener noreferrer" target="_blank">
+                      Facebook
+                    </a>
+                  </Link>
+                  <Link href="https://www.instagram.com/pizzacipollina/">
+                    <a rel="noopener noreferrer" target="_blank">
+                      Instagram
+                    </a>
+                  </Link>
+                </Dt>
+              </Dl>
+            </Col>
+          </Row>
         </Container>
       </PageSection>
     </>

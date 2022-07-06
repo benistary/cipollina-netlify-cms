@@ -125,7 +125,7 @@ const globalStyles = globalCss({
 
   hr: {
     border: 0,
-    borderTop: "0.5px solid $brightGrey",
+    borderTop: "0.5px solid $black",
     marginTop: 0,
     margin: "$contentSpacing 0",
   },
