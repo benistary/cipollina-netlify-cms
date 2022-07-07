@@ -3,17 +3,27 @@ import { useEffect } from "react";
 import Logo from "../components/Logo/Logo";
 import PageSection from "../components/PageSection/PageSection";
 import PizzaPanuozzo from "../components/PizzaPanuozzo/PizzaPanuozzo";
-import { H2, P, Span } from "../components/Typography/Typography";
-import { Additions, Panuozzo, Pizza, Posuchy, Sticks } from "../types";
+import { H1, H2, P, Span } from "../components/Typography/Typography";
+import {
+  Additions,
+  OpeningHours,
+  Panuozzo,
+  Pizza,
+  Posuchy,
+  Sticks,
+} from "../types";
 import pizzaData from "../content/pizza.json";
 import posuchyData from "../content/posuchy.json";
 import panuozzoData from "../content/panuozzo.json";
 import sticksData from "../content/sticks.json";
 import additionsData from "../content/additions.json";
+import informationsData from "../content/informations.json";
 import { Dd, Dl, Dt } from "../components/Dl";
-import { toPhoneNumber, toPrice } from "../utils";
+import { getOpeningHours, toPrice } from "../utils";
 import Link from "next/link";
 import { Col, Container, Row } from "../components/Grid";
+import seoConfig from "../next-seo.config";
+import { contact } from "../constants";
 
 function HomePage() {
   const { pizza } = pizzaData as Pizza;
@@ -21,6 +31,7 @@ function HomePage() {
   const { panuozzo } = panuozzoData as Panuozzo;
   const sticks = sticksData as Sticks;
   const { additions } = additionsData as Additions;
+  const { openingHours } = informationsData as OpeningHours;
 
   useEffect(() => {
     if (window && window.location.hash.includes("_token=")) {
@@ -30,6 +41,16 @@ function HomePage() {
 
   return (
     <>
+      <H1
+        css={{
+          clip: "auto",
+          height: "auto",
+          margin: 0,
+          overflow: "visible",
+          position: "static",
+        }}
+        aria-label={seoConfig.titl}
+      />
       <PageSection spaceBottom="none">
         <Container>
           <Row>
@@ -248,18 +269,14 @@ function HomePage() {
                   },
                 }}
               >
-                <Dt>
-                  <b>UT-ŠT</b>
-                </Dt>
-                <Dd>16:00 - 20:00</Dd>
-                <Dt>
-                  <b>PI-SO</b>
-                </Dt>
-                <Dd>16:00 - 22:00</Dd>
-                <Dt>
-                  <b>NE-PO</b>
-                </Dt>
-                <Dd>ZATVORENÉ</Dd>
+                {getOpeningHours(openingHours).map(({ days, openingHours }) => (
+                  <React.Fragment key={days}>
+                    <Dt>
+                      <b>{days}</b>
+                    </Dt>
+                    <Dd>{openingHours}</Dd>
+                  </React.Fragment>
+                ))}
               </Dl>
             </Col>
             <Col sm={6} md={4} lg={3}>
@@ -268,8 +285,8 @@ function HomePage() {
                   <b>Objednávky</b>
                 </Dd>
                 <Dt>
-                  <Link href={`tel:${toPhoneNumber("910 643 980")}`}>
-                    <a rel="noopener noreferrer">910 643 980</a>
+                  <Link href={`tel:${contact.telephone.replace(" ", "")}`}>
+                    <a rel="noopener noreferrer">{contact.telephone}</a>
                   </Link>
                 </Dt>
               </Dl>
@@ -283,7 +300,9 @@ function HomePage() {
                   <Link href="https://goo.gl/maps/MvTJ1TeQ5dmXs1Sk7">
                     <a rel="noopener noreferrer" target="_blank">
                       Bývalá Viecha <br />
-                      Hlavná 46/2, 927 01 Šaľa
+                      {contact.address.streetAddress},{" "}
+                      {contact.address.postalCode}{" "}
+                      {contact.address.addressLocality}
                     </a>
                   </Link>
                 </Dt>

@@ -119,3 +119,47 @@ collections:
                   widget: "number",
                   value_type: "float",
                 }
+      - label: "Informácie"
+        name: "informations"
+        file: "content/informations.json"
+        fields:
+          - label: "Otváracie hodiny"
+            name: "openingHours"
+            widget: "list"
+            fields:
+              - {
+                  label: "Otvorené",
+                  name: "isOpen",
+                  widget: "boolean",
+                  required: false,
+                  default: true,
+                }
+              - {
+                  label: "Od",
+                  name: "opens",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Do",
+                  name: "closes",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Dni",
+                  name: "dayOfWeek",
+                  widget: "select",
+                  multiple: true,
+                  options:
+                    [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday",
+                    ],
+                  default: ["Monday"],
+                }

@@ -1,0 +1,30 @@
+{
+  "openingHours": [
+    {
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "opens": "16:00",
+      "closes": "20:00",
+      "isOpen": true
+    },
+    {
+      "dayOfWeek": [
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "16:00",
+      "closes": "22:00",
+      "isOpen": true
+    },
+    {
+      "isOpen": false,
+      "dayOfWeek": [
+        "Sunday",
+        "Monday"
+      ]
+    }
+  ]
+}

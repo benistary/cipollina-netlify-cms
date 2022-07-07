@@ -4,7 +4,7 @@ import { getCssText } from "../stitches.config";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="Sk-sk">
         <Head>
           <meta charSet="UTF-8" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

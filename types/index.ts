@@ -47,3 +47,12 @@ export type Additions = {
     price: number;
   }[];
 };
+
+export type OpeningHours = {
+  openingHours: {
+    isOpen: boolean;
+    dayOfWeek: string[];
+    opens: string;
+    closes: string;
+  }[];
+};
